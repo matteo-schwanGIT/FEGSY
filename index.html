@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finnlee Games</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login-screen" class="screen">
+    <h1>Finnlee Games Login</h1>
+    <input type="text" id="username" placeholder="Benutzername" />
+    <input type="password" id="password" placeholder="Passwort" />
+    <button onclick="login()">Login</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div id="desktop" class="screen hidden">
+    <h2>Willkommen, <span id="user-role"></span> <span id="user-name"></span>!</h2>
+    <div class="app" onclick="openApp('peckman')">🟡 Peckman</div>
+    <div class="app" onclick="openApp('tictactoe')">❌⭕ Tic Tac Toe</div>
+    <div class="app" onclick="openApp('settings')">⚙️ Einstellungen</div>
+    <div class="app" onclick="openApp('ownerApp')">👑 Owner App</div>
+    <div class="app" onclick="openApp('adminApp')">🛠️ Admin App</div>
+  </div>
+
+  <div id="peckman" class="app-window hidden">
+    <div class="app-header">
+      <span>Peckman</span>
+      <button onclick="closeApp('peckman')">❌</button>
+    </div>
+    <div style="padding: 20px;">Hier entsteht Peckman.</div>
+  </div>
+
+  <div id="tictactoe" class="app-window hidden">
+    <div class="app-header">
+      <span>Tic Tac Toe</span>
+      <button onclick="closeApp('tictactoe')">❌</button>
+    </div>
+    <table style="margin:20px auto; border-collapse: collapse;">
+      <tr><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td></tr>
+      <tr
